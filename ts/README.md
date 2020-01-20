@@ -51,11 +51,31 @@ Enums allow us to declare a set of named constants.
 ### Numeric enum
 Numeric enums store string values as numbers.
 ```
-enum Animal {Dog, Cat, Horse};
-let a: Animal = Animal.Dog;
+enum Animals {Dog, Cat, Horse};
+let a: Animal = Animals.Dog;
+console.log(a);
+// Displays '0'
+```
+By default, enum values start from **0**. You also have the option to initialize the first numeric value yourself.
+```
+enum Animals {Dog = 1, Cat, Horse};
+let a: Animal = Animals.Dog;
+console.log(a);
+// Displays '1'
+```
+### String enum
+Enum values are initialized with string values
+```
+enum Animals {
+    Dog = 'DOG', 
+    Cat = 'CAT', 
+    Horse = 'HORSE'
+    };
+
+console.log(Animals.Dog);
+// Displays 'DOG'
 ```
 
-### String enum
 ### Heterogeneous enum
 
 
