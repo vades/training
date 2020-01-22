@@ -53,15 +53,13 @@ Numeric enums store string values as numbers.
 ```
 enum Animals {Dog, Cat, Horse};
 let a: Animal = Animals.Dog;
-console.log(a);
-// Displays '0'
+console.log(a); // Displays '0'
 ```
 By default, enum values start from **0**. You also have the option to initialize the first numeric value yourself.
 ```
 enum Animals {Dog = 1, Cat, Horse};
 let a: Animal = Animals.Dog;
-console.log(a);
-// Displays '1'
+console.log(a); // Displays '1'
 ```
 ### String enum
 Enum values are initialized with string values
@@ -72,12 +70,35 @@ enum Animals {
     Horse = 'HORSE'
     };
 
-console.log(Animals.Dog);
-// Displays 'DOG'
+console.log(Animals.Dog); // Displays 'DOG'
 ```
 
 ### Heterogeneous enum
+Heterogeneous enums contain both, string and numeric values.
+```
+enum Animals {
+    Dog = 'DOG', 
+    Cat = 1, 
+    Horse'
+    };
 
+console.log('Numeric mix:', AnimalsMix.Dog); // Displays 'DOG'
+console.log('Numeric mix:', AnimalsMix.Cat); // Displays '1'
+console.log('Numeric mix:', AnimalsMix.Horse); // Displays '2'
+
+```
+
+## Any
+Variable can be declared with any data-type —  objects, primitives, arrays, functions.
+
+```
+let anyVar: any = 10;
+anyVar = true;
+anyVar = 'This is a string';
+
+console.log('Any:', anyVar); // Displays 'This is a string'
+
+```
 
 Links
 ==========

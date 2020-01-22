@@ -55,9 +55,38 @@ console.log('Tuple:', tupleOk);
 /**
  * Enum 
  */
-enum Animal {Dog, Cat, Horse};
-let a: Animal = Animal.Dog;
+enum animalsNum {Dog, Cat, Horse};
+let a: animalsNum = animalsNum.Dog;
 //type.setIsEnumNumber(Animal);
-console.log('Enum numeric:', a);
+console.log('Numeric enum:', a);
+
+enum animalsString {
+    Dog = 'DOG', 
+    Cat = 'CAT', 
+    Horse = 'HORSE'
+    };
+
+console.log('Numeric enum:', animalsString.Dog);
+
+enum AnimalsMix {
+    Dog = 'DOG', 
+    Cat = 1, 
+    Horse
+    };
+
+console.log('Numeric mix:', AnimalsMix.Dog);
+console.log('Numeric mix:', AnimalsMix.Cat);
+console.log('Numeric mix:', AnimalsMix.Horse);
+
+/**
+ * Any
+ */
+
+let anyVar: any = 10;
+anyVar = true;
+anyVar = 'This is a string';
+
+console.log('Any:', anyVar);
+
 
 
