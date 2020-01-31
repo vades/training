@@ -39,6 +39,21 @@ Use a generic array type, Array<elemType>:
 let arrayNumber2: Array<number> = [1, 2, 3];
 let arrayString1: string[] = ['one', 'two', 'three'];
 ```
+
+## Object
+An object is an instance which contains set of key value pairs.
+```
+let typeObject = {
+    key1: 'Scalar', // Scalar value
+    key2: ['val1', 'val2', 'val3'], // Array value
+    key3: { id: 25, name: 'John'}, // Object value
+    key4: function(){ return 'I am function';}, // Function value
+};
+
+console.log('Object:', typeObject);
+
+```
+
 ## Tuple
 These types allow you to express an array with a fixed number of elements.
 ```
@@ -97,6 +112,29 @@ anyVar = true;
 anyVar = 'This is a string';
 
 console.log('Any:', anyVar); // Displays 'This is a string'
+
+```
+
+## Void
+Void is used where there is no data type.
+
+```
+function logMe(): void {
+    console.log('This is a log message');
+}
+console.log('Void:', logMe()); // Output: undefined
+
+```
+
+## Never
+Type never indicates the values that will never occur.
+
+```
+function error(message: string): never {
+    throw new Error(message);
+}
+
+console.log('Never:',  error('This is a error message')); // Output: throws error
 
 ```
 

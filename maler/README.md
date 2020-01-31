@@ -1,14 +1,12 @@
-Supervised learning
+An introduction to Machine Learning
 ==========
 
-Unsupervised learning
+Classification of Machine Learning
 ==========
-
-Semi-supervised learning
-==========
-
-Reinforcement learning
-==========
+## Supervised learning
+## Unsupervised learning
+## Semi-supervised learning
+## Reinforcement learning
 
 
 

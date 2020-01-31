@@ -45,6 +45,40 @@ console.log('Array number:', arrayNumber1);
 console.log('Array string:', arrayString2);
 
 /**
+ * Object
+ */
+let typeObject = {
+    key1: 'Scalar', // Scalar value
+    key2: ['val1', 'val2', 'val3'], // Array value
+    key3: { id: 25, name: 'John'}, // Object value
+    key4: function(){ } // Function value
+};
+typeObject.key4 = function(){
+    return 'I am ' + typeObject.key1;
+};
+console.log('Object:', typeObject);
+console.log('Object scalar:', typeObject.key1);
+console.log('Object array:', typeObject.key2);
+console.log('Object object:', typeObject.key3);
+console.log('Object function:', typeObject.key4());
+
+interface IPoint { 
+    x:number 
+    y:number 
+ } 
+ function addPoints(p1:IPoint,p2:IPoint):IPoint { 
+    var x = p1.x + p2.x 
+    var y = p1.y + p2.y 
+    return {x:x,y:y} 
+ } 
+ 
+ //Valid 
+ var newPoint = addPoints({x:3,y:4},{x:5,y:1})  
+ 
+ //Error 
+ //var newPoint2 = addPoints({x:1},{x:4,y:3})
+ //console.log(newPoint2);
+/**
  * Tuple
  */
 let tupleOk: [string, number];
@@ -88,5 +122,19 @@ anyVar = 'This is a string';
 
 console.log('Any:', anyVar);
 
+/**
+ * Void
+ */
+function logMe(): void {
+    console.log('This is a log message');
+}
+console.log('Void:', logMe());
 
+/**
+ * Never
+ */
+function error(message: string): never {
+    throw new Error(message);
+}
 
+//console.log('Never:',  error('This is a error message'));

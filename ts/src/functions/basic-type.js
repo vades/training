@@ -39,6 +39,33 @@ var arrayString2 = ['one', 'two', 'three'];
 console.log('Array number:', arrayNumber1);
 console.log('Array string:', arrayString2);
 /**
+ * Object
+ */
+var typeObject = {
+    key1: 'Scalar',
+    key2: ['val1', 'val2', 'val3'],
+    key3: { id: 25, name: 'John' },
+    key4: function () { } // Function value
+};
+typeObject.key4 = function () {
+    return 'I am ' + typeObject.key1;
+};
+console.log('Object:', typeObject);
+console.log('Object scalar:', typeObject.key1);
+console.log('Object array:', typeObject.key2);
+console.log('Object object:', typeObject.key3);
+console.log('Object function:', typeObject.key4());
+function addPoints(p1, p2) {
+    var x = p1.x + p2.x;
+    var y = p1.y + p2.y;
+    return { x: x, y: y };
+}
+//Valid 
+var newPoint = addPoints({ x: 3, y: 4 }, { x: 5, y: 1 });
+//Error 
+//var newPoint2 = addPoints({x:1},{x:4,y:3})
+//console.log(newPoint2);
+/**
  * Tuple
  */
 var tupleOk;
@@ -83,4 +110,18 @@ var anyVar = 10;
 anyVar = true;
 anyVar = 'This is a string';
 console.log('Any:', anyVar);
+/**
+ * Void
+ */
+function logMe() {
+    console.log('This is a log message');
+}
+console.log('Void:', logMe());
+/**
+ * Never
+ */
+function error(message) {
+    throw new Error(message);
+}
+//console.log('Never:',  error('This is a error message'));
 //# sourceMappingURL=basic-type.js.map
