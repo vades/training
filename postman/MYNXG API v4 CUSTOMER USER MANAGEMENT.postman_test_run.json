@@ -1,0 +1,4333 @@
+{
+	"id": "b98077fc-a2f3-450c-9dd3-ccd02e255de9",
+	"name": "MYNXG API v4 CUSTOMER USER MANAGEMENT",
+	"timestamp": "2020-01-31T14:38:28.000Z",
+	"collection_id": "767659a1-34df-4865-ad26-5b829fb82490",
+	"folder_id": 0,
+	"environment_id": "e94124ed-6a4d-414f-8eeb-604893f88a74",
+	"totalPass": 167,
+	"totalFail": 141,
+	"results": [
+		{
+			"id": "433a45bb-142c-4c3e-8456-db5af160e22d",
+			"name": "Returns thing alarms.",
+			"url": "mynxgapiv4-customers/api/v4/alarms/things/11120300000669",
+			"time": 81,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: OK": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "74730527-4208-4a1e-85eb-c058469a9e18",
+			"name": "Send thing alarm.",
+			"url": "mynxgapiv4-customers/api/v4/alarms/",
+			"time": 58,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "34b487fa-afbd-4ba9-bf2e-84be49f35f60",
+			"name": "Update application parameters",
+			"url": "mynxgapiv4-customers/api/v4/applications/mobile/4808ac25-9d0a-56a7-b6ce-f3e19f3e6b6c",
+			"time": 67,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "c93b8751-89cb-48f1-a19f-d41f6ac54534",
+			"name": "Register a mobile application.",
+			"url": "mynxgapiv4-customers/api/v4/applications/mobile/",
+			"time": 85,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Mobile application already exixts.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Mobile application already exixts.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "deb75d80-f475-42ae-af4c-9e4623c41fe2",
+			"name": "List of mobile applications.",
+			"url": "mynxgapiv4-customers/api/v4/applications/mobile/",
+			"time": 77,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: OK": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "d55ed57e-b6bd-4315-bbe2-7c9c89c4409a",
+			"name": "Delete mobile application by UUID.",
+			"url": "mynxgapiv4-customers/api/v4/applications/mobile/4808ac25-9d0a-56a7-b6ce-f3e19f3e6b6c",
+			"time": 38,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "51858678-6db8-43d4-84a4-b373a2ce89bf",
+			"name": "Delete mobile application by application name and version.",
+			"url": "mynxgapiv4-customers/api/v4/applications/mobile/?appname=Access&version=debug1",
+			"time": 31,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "6bb498cf-e6c7-48bb-bc14-cadada85d11b",
+			"name": "Get auth challenge.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/challenge/?session=mobile",
+			"time": 35,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "4476e28f-fb52-4894-a916-f997fe5a5782",
+			"name": "User login.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/login/",
+			"time": 86,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: OK": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "582c9477-2587-4692-b1b6-9a305547e626",
+			"name": "Thing login.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/login/",
+			"time": 36,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Login failed. Bad password.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Login failed. Bad password.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "b4e321f5-cb31-47b3-a824-4277a7b7ecdf",
+			"name": "User login. Copy",
+			"url": "mynxgapiv4-customers/api/v4/authentication/login/",
+			"time": 37,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Login failed. Bad password.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Login failed. Bad password.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "54a9c504-d0a9-41ca-8376-93077aa11fbf",
+			"name": "User login. cerberus",
+			"url": "mynxgapiv4-customers/api/v4/authentication/login/",
+			"time": 92,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: OK": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "fd547fbf-2e96-4619-a982-f17a35068651",
+			"name": "Mobile UE login.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/login/",
+			"time": 38,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Login failed. Signature check failed.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Login failed. Signature check failed.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "5643a572-5eb6-4ec8-b25c-a8c72ba73e7a",
+			"name": "App validation.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/login/",
+			"time": 82,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Login failed. IMEI mismatched.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Login failed. IMEI mismatched.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "f6f11e89-5849-4860-8aa0-4a9fcc40e094",
+			"name": "Another user logout.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/logout/users/b20336b3-0b20-46b1-bc67-4f63ac61c3fa",
+			"time": 50,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "e4ae0940-3dab-4c94-97ac-1f8bcff44abc",
+			"name": "Customer's users (all) logout.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/logout/customers/cc4b6ab3-eeac-5740-b046-16815359c3c9",
+			"time": 35,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unable to decode authorization token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unable to decode authorization token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "660c8c63-b642-4ce9-98ad-74dfc39befc4",
+			"name": "Current user logout.",
+			"url": "mynxgapiv4-customers/api/v4/authentication/logout/",
+			"time": 32,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unable to decode authorization token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unable to decode authorization token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "0c18c268-6b76-4073-9f16-9ae97aaccc0e",
+			"name": "Create new customer's address.",
+			"url": "mynxgapiv4-customers/api/v4/customers/addresses/",
+			"time": 45,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "7099afa4-6b51-4393-b54b-c1926effff84",
+			"name": "Create new  address for another customer.",
+			"url": "mynxgapiv4-customers/api/v4/customers/8a5ea743-31f0-4a55-a046-8c6e75860b95/addresses/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "44a63fab-c99d-4427-b565-7d2062059252",
+			"name": "Get parent Customer adresses.",
+			"url": "mynxgapiv4-customers/api/v4/customers/addresses/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a1914d30-0d8e-4dc1-b567-4620974c655d",
+			"name": "Get Customer's addresses.",
+			"url": "mynxgapiv4-customers/api/v4/customers/8a5ea743-31f0-4a55-a046-8c6e75860b95/addresses/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "d17a6b07-4e11-48a4-b454-5e492775ce62",
+			"name": "Remove customer's address.",
+			"url": "mynxgapiv4-customers/api/v4/customers/addresses/1066698d-30eb-4cef-9cce-56a95d6cd2f5",
+			"time": 47,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "b3eabeac-0a47-4d0a-b93a-5c0380c8f30f",
+			"name": "Remove another customer address.",
+			"url": "mynxgapiv4-customers/api/v4/customers/8a5ea743-31f0-4a55-a046-8c6e75860b95/addresses/be8d9544-f01a-49e7-90ed-a9dd086c7ece/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "ac5337ec-591a-4b90-a6a6-a35df2de4fab",
+			"name": "Patch customer's address. Change address type.",
+			"url": "mynxgapiv4-customers/api/v4/customers/addresses/b271428f-c30b-4c37-97e4-2832f67ad3be",
+			"time": 45,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "df744c11-a4d3-4025-a7ca-c08032547e37",
+			"name": "Patch customer's address. Change address data.",
+			"url": "mynxgapiv4-customers/api/v4/customers/addresses/1066698d-30eb-4cef-9cce-56a95d6cd2f5",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "9b54b536-5bd4-487f-a982-534e633e171c",
+			"name": "Patch another customer address.",
+			"url": "mynxgapiv4-customers/api/v4/customers/8a5ea743-31f0-4a55-a046-8c6e75860b95/addresses/be8d9544-f01a-49e7-90ed-a9dd086c7ece/",
+			"time": 48,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "84abe25b-82b6-4148-badf-db8f64a9840e",
+			"name": "Create new user for given customer. Default roles.",
+			"url": "mynxgapiv4-customers/api/v4/customers/cc4b6ab3-eeac-5740-b046-16815359c3c9/users/",
+			"time": 47,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "080a981c-d7f6-4523-b8e4-8bfbe95fbe84",
+			"name": "Create new user for given customer with roles.",
+			"url": "mynxgapiv4-customers/api/v4/customers/10aa61fe-837f-4f7c-91ab-b1de8c73e710/users/",
+			"time": 35,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "ae871f45-13cb-46f0-9dcf-6cf2af3805d3",
+			"name": "Get customer's users list.",
+			"url": "mynxgapiv4-customers/api/v4/customers/cc4b6ab3-eeac-5740-b046-16815359c3c9/users/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "d3af1513-cd80-42c2-9633-330ed9814661",
+			"name": "Delete a user from a customer",
+			"url": "mynxgapiv4-customers/api/v4/customers/10aa61fe-837f-4f7c-91ab-b1de8c73e710/users/02ebaeb9-320f-45c2-918a-088da36bdfee",
+			"time": 36,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a099039e-13be-4102-b025-bb8c9bc4748f",
+			"name": "Assign User to different Customer",
+			"url": "mynxgapiv4-customers/api/v4/customers/4fe30f94-af6d-4403-8ae5-616cab9be42e/users/d09b9b71-4868-422f-bef8-c3f0a87f028b",
+			"time": 36,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "eda52557-0953-42f2-a08d-b304ca004046",
+			"name": "Assign mobile application to customer.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{customer_uuid}}/applications/{{app_uuid}}",
+			"time": 37,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8b1208e2-4f27-42af-a927-849339a438f0",
+			"name": "List mobile applications assigned to customer.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{customer_uuid}}/applications/",
+			"time": 36,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "3c1a397e-d867-4b7b-87ce-f56408aeb240",
+			"name": "Revoke assigned application to customer.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{customer_uuid}}/applications/{{test_app_uuid}}",
+			"time": 34,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "605fef5e-d6c5-40e2-bc47-1571c45728da",
+			"name": "Assign thing to the customer.",
+			"url": "mynxgapiv4-customers/api/v4/customers/1b45ef43-f2e9-401d-baa7-4a1c5a77e0cf/things/1b45ef43-f2e9-401d-baa7-4a1c5a77e0cf",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "68fe3653-31d2-4bcf-b1d3-022db5559bf7",
+			"name": "Revoke thing from customer",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{uuid}}/things/{{uuid}}/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "0813dbc1-55ed-4b95-b2a8-64495327ab78",
+			"name": "Create new customer's terms",
+			"url": "mynxgapiv4-customers/api/v4/customers/terms/",
+			"time": 48,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "54bb36c3-ad33-453d-8a98-a2231cf8297d",
+			"name": "Create new   terms for another customer",
+			"url": "mynxgapiv4-customers/api/v4/customers/10aa61fe-837f-4f7c-91ab-b1de8c73e710/terms/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8cf6fb79-7d2e-4bb3-a3dd-43016ea4c749",
+			"name": "Get parent Customer  terms",
+			"url": "mynxgapiv4-customers/api/v4/customers/terms/",
+			"time": 53,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "86bbbfda-2b2f-420d-ab0f-145858e45a46",
+			"name": "Get Customer's  terms",
+			"url": "mynxgapiv4-customers/api/v4/customers/8a5ea743-31f0-4a55-a046-8c6e75860b95/terms/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "195df9b2-ef96-431e-a796-14d88e0466cb",
+			"name": "Patch customer's  terms",
+			"url": "mynxgapiv4-customers/api/v4/customers/terms/b61b236a-a906-534c-974d-56bf663a12de",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "14ad3df5-380b-4bea-b90f-941f1fb3fc65",
+			"name": "Patch another customer terms",
+			"url": "mynxgapiv4-customers/api/v4/customers/10aa61fe-837f-4f7c-91ab-b1de8c73e710/terms/b61b236a-a906-534c-974d-56bf663a12de/",
+			"time": 41,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "0e697df6-75b4-4dd2-8e66-c7de4237f492",
+			"name": "Sets current customer's properties.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/properties/",
+			"time": 15,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "3eee800d-2575-438d-a24a-b9bea894caaa",
+			"name": "Sets customer's properties. MYNXG_ADMIN / ADMIN only.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{uuid}}/private/properties/",
+			"time": 18,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "4fc46a05-23ac-4440-9abc-0f3d15c3008c",
+			"name": "Returns current customer's properties.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/properties/",
+			"time": 17,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "1c5dd747-4348-4bde-afbc-0168f4ea5b8e",
+			"name": "Returns customer's properties. MYNXG_ADMIN / ADMIN only.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{uuid}}/private/properties/",
+			"time": 15,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8622b1c0-0ea7-482d-a688-243d3fd2e83f",
+			"name": "Change current customer's properties.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/properties/",
+			"time": 18,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "cb8b78bc-306c-49af-9a37-27d0d96d63c2",
+			"name": "Change customer's properties. MYNXG_ADMIN / ADMIN only.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{uuid}}/private/properties/",
+			"time": 15,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "f28c2d5c-b7a1-4a46-b36e-76942e0d4f19",
+			"name": "Clears current customer properies.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/properties/",
+			"time": 16,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "c874e006-8028-4502-b459-ca7b85aa2c57",
+			"name": "Clears customer's properties. MYNXG_ADMIN / ADMIN only.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{uuid}}/private/properties/",
+			"time": 16,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "f7a67fbb-f699-4b7e-b45e-4363f2bbba5b",
+			"name": "Sends new resource file to the server.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/resources/",
+			"time": 17,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "cdb89543-f8f4-4afb-ae30-79fae93dcdf0",
+			"name": "Sends new resource file to the server. MYNXG_ADMIN / ADMIN only.",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{uuid}}/private/resources/",
+			"time": 18,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "fee32d3e-3c99-445c-bd58-c2bc6dec1512",
+			"name": "Download resource from the server using resource alias.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/resources/?alias=logo_file",
+			"time": 20,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "6a5a7668-248e-4ce0-bf13-ed56a245303e",
+			"name": "Download resource file from the server using uuid.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/resources/{{uuid}}",
+			"time": 15,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "d4339b53-70c2-4fed-b0b4-45502c1d73fd",
+			"name": "Remove resource file from the server using resource alias.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/resources/?alias=logo_file",
+			"time": 16,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "64bb312c-b116-4a59-8304-725cd044d992",
+			"name": "Remove resource file from the server using uuid.",
+			"url": "mynxgapiv4-customers/api/v4/customers/private/resources/{{uuid}}",
+			"time": 19,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "4e2514c4-fcc3-4658-bbee-1f7250e35fd0",
+			"name": "Get parent customer information.",
+			"url": "mynxgapiv4-customers/api/v4/customers/",
+			"time": 34,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unable to decode authorization token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unable to decode authorization token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a603d138-1c98-4000-8487-b4c8dbfc480c",
+			"name": "Get customer information.",
+			"url": "mynxgapiv4-customers/api/v4/customers/8a5ea743-31f0-4a55-a046-8c6e75860b95/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "b5acd61f-c33f-403c-924d-5bff29a873fd",
+			"name": "Get all customers information",
+			"url": "mynxgapiv4-customers/api/v4/customers/?all",
+			"time": 45,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "cc3e72f8-ad24-4602-8919-03d489f11d7a",
+			"name": "Create new customer entry. MyOmega",
+			"url": "mynxgapiv4-customers/api/v4/customers/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "844ac0d1-7cef-489e-bf5e-9773024cd4fd",
+			"name": "Create new customer entry. ACME",
+			"url": "mynxgapiv4-customers/api/v4/customers/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a04afa07-aa54-43fa-b3a5-12d49e546b6d",
+			"name": "Update customer data column",
+			"url": "mynxgapiv4-customers/api/v4/customers/{{uuid}}",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "84c4a274-9a71-4d43-bf84-a727ce7818ad",
+			"name": "Delete customer. NOT IMPLEMENTED.",
+			"url": "mynxgapiv4-customers/api/v4/customers/",
+			"time": 16,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "b615008b-0de9-4559-a598-4eb88518938d",
+			"name": "Returns thing data.",
+			"url": "mynxgapiv4-customers/api/v4/data/things/11120300000668/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "74d0245c-8245-4674-8ca5-673feaab20e1",
+			"name": "Returns gateway (all thing connected) data.",
+			"url": "mynxgapiv4-customers/api/v4/data/11120300000667",
+			"time": 14,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a3491c4e-40bf-4f17-a319-e799068c3478",
+			"name": "Returns data generated by command",
+			"url": "mynxgapiv4-customers/api/v4/data/commands/{{uuid}}/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "fc8cbd79-2450-4333-b295-9c65d6759c97",
+			"name": "Send thing data.",
+			"url": "mynxgapiv4-customers/api/v4/data/",
+			"time": 74,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8835adeb-f48a-418e-a72d-07889b5470f7",
+			"name": "Send encrypted thing data.",
+			"url": "mynxgapiv4-customers/api/v4/data/",
+			"time": 61,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "1a7da7ca-c951-4bf1-b29d-630f6987cdb0",
+			"name": "Send thing data. Test",
+			"url": "mynxgapiv4-customers/api/v4/data/",
+			"time": 65,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "655a0a34-5823-4f23-b82d-c1998782f123",
+			"name": "Send thing data with command uuid",
+			"url": "mynxgapiv4-customers/api/v4/data/",
+			"time": 76,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "ad492fb4-26ce-46ff-8e6c-5195a9514592",
+			"name": "Create new GMD object address.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/eecdacab-94bc-40aa-b4ad-a57011c33c5b/addresses/",
+			"time": 45,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "d33e7ba7-c41e-428b-a6c0-20287109e5e9",
+			"name": "Get GMD object addresses.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/eecdacab-94bc-40aa-b4ad-a57011c33c5b/addresses/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "1efca5e8-f7bd-4698-bf4c-8ad94c1c6d3b",
+			"name": "Remove GMD object's address.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/1066698d-30eb-4cef-9cce-56a95d6cd2f5",
+			"time": 49,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "b37b13b0-7034-4abe-8a3c-a776cd2909f5",
+			"name": "Change GMD object's address.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/2fa37ac2-ab63-4309-8409-cf79cc647e72/addresses/405d2295-e961-4540-a2dd-2b8273a7332c",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "5af50d1c-d729-451f-b4c9-2adac934028b",
+			"name": "Returns GMD object's children  objects.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/9beb7890-bd89-4656-935f-acd6c625de11/children/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "f84cf277-2e72-44a4-9814-a01208a2ec66",
+			"name": "Set GMD object's parent object.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "22f4e2fe-e303-4afb-86b5-d8c37b892cc7",
+			"name": "Returns GMD object's parent object.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/c308ea03-10d7-415e-a951-4a6faae19e4e/parent/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "352888a1-b3ab-47d1-ae53-8f5365fc3781",
+			"name": "Removes GMD object's parent.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/c308ea03-10d7-415e-a951-4a6faae19e4e/parent/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "c8bb94cd-0972-4931-8eba-f8ea194b9767",
+			"name": "Create new GMD object.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8d7abe6e-99d2-4a4d-9f20-ac5743762cae",
+			"name": "Create new GMD object (with configuration).",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a6880f3f-cdfd-4c9f-93a2-31a047b97ffc",
+			"name": "Retrieve GMD object by UUID.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/eecdacab-94bc-40aa-b4ad-a57011c33c5b/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8aaf35f1-8f76-4a3e-a286-748b13e1678e",
+			"name": "Retrieve all GMD objects.",
+			"url": "mynxgapiv4-customers/api/v4/gmd/objects/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "e5647fe9-e92a-44f3-9dbe-278e392fbd33",
+			"name": "Return roles available in MYNXG API V4.",
+			"url": "mynxgapiv4-customers/api/v4/roles/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "37abb3bb-1aed-4be4-88dd-bb1041fb6641",
+			"name": "Returns thing statuses.",
+			"url": "mynxgapiv4-customers/api/v4/status/things/11120300000667",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "b488ef8f-3e4b-41d9-99f3-f6255dc2a215",
+			"name": "Send thing status.",
+			"url": "mynxgapiv4-customers/api/v4/status/",
+			"time": 76,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "031c18c3-9169-442b-b905-da44dcd2d7ce",
+			"name": "Send thing status with command state update",
+			"url": "mynxgapiv4-customers/api/v4/status/",
+			"time": 74,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Success Response": true,
+				"msg: Created": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"msg: Created": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "2b785d8f-9e14-40a1-8a19-48d83e16013f",
+			"name": "Returns complete assembly of Edge/Sense",
+			"url": "mynxgapiv4-customers/api/v4/things/e909d825-c509-5081-9655-5f1a2850d73b/assembly/",
+			"time": 48,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "20bc9ef4-fd1e-447f-b52e-d78a09e24c85",
+			"name": "Get commands history for given thing",
+			"url": "mynxgapiv4-customers/api/v4/things/{{uuid}}/commands/history/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "eec9dcd0-1d0c-4e1b-94f6-532809d9a8ac",
+			"name": "Get next command assigned to thing - FOR INTERNAL USE ONLY",
+			"url": "mynxgapiv4-customers/api/v4/things/{{uuid}}/commands/next/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "dfd07968-ec31-40a4-9e3b-deddc55c45d4",
+			"name": "Assign command to thing",
+			"url": "mynxgapiv4-customers/api/v4/things/{{uuid}}/commands/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "927ffc48-a9f7-4f73-9ab4-d9238a370fcb",
+			"name": "Get command by uuid",
+			"url": "mynxgapiv4-customers/api/v4/things/commands/{{uuid}}/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "580ce482-81c2-4fda-9873-6f6f0a647274",
+			"name": "Drop thing command by user",
+			"url": "mynxgapiv4-customers/api/v4/things/{{uuid}}/commands/{{uuid}}",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "e3665083-e7ec-4948-8f1c-bce5ce259b64",
+			"name": "Returns thing's previous configurations.",
+			"url": "mynxgapiv4-customers/api/v4/things/b1c56227-a22d-553d-b22b-aac884eca768/config/history/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "2ceb0639-14de-498d-8c15-993f538a0ef1",
+			"name": "Send new config to the thing.",
+			"url": "mynxgapiv4-customers/api/v4/things/b1c56227-a22d-553d-b22b-aac884eca768/config/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "72979b70-b316-427e-87a3-c8837b9d46de",
+			"name": "Send new config to the thing for future use.",
+			"url": "mynxgapiv4-customers/api/v4/things/b1c56227-a22d-553d-b22b-aac884eca768/config/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "6b6b3b30-7fa6-469f-abc3-a464694e6a14",
+			"name": "Returns thing's current configuration.",
+			"url": "mynxgapiv4-customers/api/v4/things/b1c56227-a22d-553d-b22b-aac884eca768/config/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a4df88e1-c66c-4b47-9c4f-0b6edb273741",
+			"name": "Adds a thing to the pool.",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/c6f42913-9331-412a-b4aa-f062d60b0e4d/things/b1c56227-a22d-553d-b22b-aac884eca768/",
+			"time": 48,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "218003b8-1ffa-48e4-aef9-2cc5a95e0f0e",
+			"name": "Returns list of things in the pool.",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/c6f42913-9331-412a-b4aa-f062d60b0e4d/things/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "c6f6789f-533c-4a7e-bb55-2306ff37d4bd",
+			"name": "Removes thing from the pool.",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/c6f42913-9331-412a-b4aa-f062d60b0e4d/things/b1c56227-a22d-553d-b22b-aac884eca768/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "24c80347-946d-4f39-b8e2-d91f5bb7f335",
+			"name": "Returns single things pool information.",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/c6f42913-9331-412a-b4aa-f062d60b0e4d",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "5712b131-7dca-4158-aa0c-8e774f3cf9ac",
+			"name": "Create new things pool (ownership: current user + current customer).",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "35e86e1e-bcd3-4703-a491-da03d112363b",
+			"name": "Returns current users's things pools. (ALL)",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "75d1b801-8e6f-4be2-82a5-2131ebd79204",
+			"name": "Deletes things pool.",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/8e38f2a1-eddf-47f1-9496-ec14b82ba3b2/",
+			"time": 56,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "99d699ba-f49e-4fa0-951e-1b637acb8e34",
+			"name": "Sets parent thing for given thing",
+			"url": "mynxgapiv4-customers/api/v4/things/e909d825-c509-5081-9655-5f1a2850d73b/parent/24508254-c94c-5839-bb6c-ec222076c44f/",
+			"time": 56,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "684b868b-ae54-422f-a61f-4e115933e31c",
+			"name": "Gets parent thing id for given thing",
+			"url": "mynxgapiv4-customers/api/v4/things/24508254-c94c-5839-bb6c-ec222076c44f/parent/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "4caf1ee8-f358-42fb-a444-45cc1fefe1c0",
+			"name": "Removes parent-child relation for given child thing",
+			"url": "mynxgapiv4-customers/api/v4/things/24508254-c94c-5839-bb6c-ec222076c44f/parent/",
+			"time": 33,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "512ee9ee-34c1-4d93-abd2-a16c195f1957",
+			"name": "Create new thing entry.",
+			"url": "mynxgapiv4-customers/api/v4/things/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "437dc9dc-c8ef-438d-b055-91b463215d3e",
+			"name": "Retrieve thing information.",
+			"url": "mynxgapiv4-customers/api/v4/things/b1c56227-a22d-553d-b22b-aac884eca768",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "e0b10437-0d00-4599-86f4-93958f327086",
+			"name": "Update thing information.",
+			"url": "mynxgapiv4-customers/api/v4/things/15130100000903/",
+			"time": 55,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "73a5131a-0f2d-4de2-b2cb-f2f3b44891a7",
+			"name": "Removes thing from the database",
+			"url": "mynxgapiv4-customers/api/v4/things/15130100000903/",
+			"time": 56,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "bf632584-4535-4096-8bc4-0d6a33811b5f",
+			"name": "Assign application to user.",
+			"url": "mynxgapiv4-customers/api/v4/users/{{user_uuid}}/applications/{{app_uuid}}",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "821b3d03-ca6d-4c92-a90e-13b13ca0698a",
+			"name": "Revoke assigned application to user.",
+			"url": "mynxgapiv4-customers/api/v4/users/{{user_uuid}}/applications/{{test_app_uuid}}",
+			"time": 35,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "32830ed2-2351-47ac-b432-a0fac7757475",
+			"name": "List of application assigned to user.",
+			"url": "mynxgapiv4-customers/api/v4/users/{{test_user_uuid}}/applications/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "1e3fc41a-e478-43f6-8335-c553a9de217e",
+			"name": "Accepts MYNXG Terms & Conditions",
+			"url": "mynxgapiv4-customers/api/v4/users/flags/terms/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "9ad3ea65-3955-4b87-8d62-ac2434e363cb",
+			"name": "Deactivate/activate user's account.",
+			"url": "mynxgapiv4-customers/api/v4/users/11e6500a-fb9c-44cf-b486-d2ecd9c8068f/flags/active/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "7d2cf9d8-d3cb-434a-bd13-cc415ba2541c",
+			"name": "Get user's flags.",
+			"url": "mynxgapiv4-customers/api/v4/users/1a8f0802-aec9-430c-9bba-12ff6142f547/flags/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "bd3f6966-a343-4cb1-a402-f5beb3680229",
+			"name": "Get current user's flags",
+			"url": "mynxgapiv4-customers/api/v4/users/flags/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8921eb98-8764-47ec-8418-e61af2601ff6",
+			"name": "Reset user's password.",
+			"url": "mynxgapiv4-customers/api/v4/users/password/reset/",
+			"time": 33,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Password was already reset. Please check your email.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Password was already reset. Please check your email.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "39564e86-5bd7-4f4e-afb6-02700095b5ad",
+			"name": "Reset other user password. (force password change)",
+			"url": "mynxgapiv4-customers/api/v4/users/1a8f0802-aec9-430c-9bba-12ff6142f547/password/reset/",
+			"time": 37,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Password was already reset. Please check your email.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Password was already reset. Please check your email.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "c453bfe7-adbc-4745-8c29-82aff1f18f3c",
+			"name": "Set new password for the user",
+			"url": "mynxgapiv4-customers/api/v4/users/password/set/",
+			"time": 34,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "e7e8c600-d8a2-4df6-899f-b3755ada6057",
+			"name": "Adds a user to the pool.",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/adb7701e-a42b-42ca-81a7-6478dc2b7c0e/users/{{test_user_uuid}}/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "60123113-322b-4c1d-beed-6585e00ab22e",
+			"name": "Returns list of users in the pool.",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/cfc61b7d-b6ae-4f3a-91b0-551ca4ceb3ca/users/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "fbdac209-875e-4173-91b1-54ffecc0e6a6",
+			"name": "Removes a user from the pool.",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/cfc61b7d-b6ae-4f3a-91b0-551ca4ceb3ca/users/952f4670-0313-427f-9df8-a3fd2e581a15/",
+			"time": 47,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "9d042200-b9ae-4766-bd20-bc5aa47ca384",
+			"name": "Assign application to the pool",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/{{pool_uuid}}/applications/{{app_uuid}}",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "4ab9e337-988a-43ab-82ca-1876e037f9f1",
+			"name": "Revoke assigned application to the pool.",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/{{pool_uuid}}/applications/{{app_uuid}}",
+			"time": 47,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a774258f-05ba-4f12-91c9-03bb9314a41e",
+			"name": "Returns list of applications assigned to the user pool.",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/{{pool_uuid}}/applications/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "91382a38-9351-4ac4-9346-23e39df5b146",
+			"name": "Create new users pool (ownership: current user + current customer).",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/",
+			"time": 50,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "349f394c-5d58-40da-9bdd-d5f37adcc6bf",
+			"name": "Returns single users pool information. (has to have same parent customer as current user)",
+			"url": "mynxgapiv4-customers/api/v4/things/pools/c6f42913-9331-412a-b4aa-f062d60b0e4d",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "43df8b43-6770-4ec0-b361-7b6aaced47cb",
+			"name": "Returns all users pool information. (same parent customer as current user) Copy",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/",
+			"time": 43,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "bdb08959-dda4-4bd1-9e0c-9a945a6e4005",
+			"name": "Removes users pool.",
+			"url": "mynxgapiv4-customers/api/v4/users/pools/cfc61b7d-b6ae-4f3a-91b0-551ca4ceb3ca/",
+			"time": 45,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "f23db4af-5452-4ea3-bb08-5ccc45242907",
+			"name": "Get user's roles",
+			"url": "mynxgapiv4-customers/api/v4/users/roles/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "c6064920-49cb-46f2-a325-66163b9600e6",
+			"name": "Get other user roles.",
+			"url": "mynxgapiv4-customers/api/v4/users/952f4670-0313-427f-9df8-a3fd2e581a15/roles/",
+			"time": 50,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "0d58946c-2ca4-4ce8-8cd4-1a65f8c1c2c8",
+			"name": "Sets user's roles.",
+			"url": "mynxgapiv4-customers/api/v4/users/952f4670-0313-427f-9df8-a3fd2e581a15/roles/",
+			"time": 41,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "832526ba-0ccb-451f-985a-6078ec6b4319",
+			"name": "Assign thing to user.",
+			"url": "mynxgapiv4-customers/api/v4/users/69118235-9eec-404b-b35d-711d585ea65c/things/e909d825-c509-5081-9655-5f1a2850d73b/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "2828a2ba-65be-40f4-8c03-78e4f0616d9c",
+			"name": "Returns user's things list.",
+			"url": "mynxgapiv4-customers/api/v4/users/952f4670-0313-427f-9df8-a3fd2e581a15/things/",
+			"time": 33,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unable to decode authorization token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unable to decode authorization token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "936cd7a4-9926-46f2-b1f5-3ed2277c5798",
+			"name": "Revoke thing from user.",
+			"url": "mynxgapiv4-customers/api/v4/users/{{uuid}}/things/{{uuid}}/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "97e37cfc-9584-44ac-aafa-e55d23d828b9",
+			"name": "Assign application to mobile equipment.",
+			"url": "mynxgapiv4-customers/api/v4/users/ue/mobile/{{me_uuid}}/applications/{{app_uuid}}",
+			"time": 34,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8ad637f3-3d8a-47e0-868e-8c934ed06aea",
+			"name": "Revoke assigned application to mobile equipment.",
+			"url": "mynxgapiv4-customers/api/v4/users/ue/mobile/{{me_uuid}}/applications/{{app_uuid}}",
+			"time": 33,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "bb3f2610-1ae5-4749-81ef-689e9a3baf09",
+			"name": "List of application that assigned to mobile equipment.",
+			"url": "mynxgapiv4-customers/api/v4/users/ue/mobile/{{me_uuid}}/applications/",
+			"time": 34,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "481ef7fa-3952-478a-bafe-4727d47502ef",
+			"name": "Register user's mobile phone.",
+			"url": "mynxgapiv4-customers/api/v4/users/ue/mobile/",
+			"time": 34,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "46e48b54-fad2-470f-bec5-e93ce288d402",
+			"name": "Delete user's mobile phone by UUID.",
+			"url": "mynxgapiv4-customers/api/v4/users/ue/mobile/ba90f82d-a070-5bd4-83c6-f3be3e442e9c",
+			"time": 32,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "ad785b0b-6297-4894-a6c2-5b2420f4ceff",
+			"name": "List of user's mobile.",
+			"url": "mynxgapiv4-customers/api/v4/users/ue/mobile/",
+			"time": 33,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "8e750e43-9e31-4c3d-ab39-3e86466bb869",
+			"name": "Delete user's mobile phone by IMEI.",
+			"url": "mynxgapiv4-customers/api/v4/users/ue/mobile/?imei=240422602906986",
+			"time": 33,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Invalid token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Invalid token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "45e71ac2-0908-403e-8f0b-3c0ad3bd8ef2",
+			"name": "Assign GMD object to user.",
+			"url": "mynxgapiv4-customers/api/v4/users/{uuid}/gmd/objects/{uuid}",
+			"time": 14,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "94799cff-48d3-433a-b80f-cef25ecf88aa",
+			"name": "Get user's GMD objects.",
+			"url": "mynxgapiv4-customers/api/v4/users/{uuid}/gmd/objects/",
+			"time": 17,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "0d416efa-9d0e-46ff-b719-1b4c664e5ae8",
+			"name": "Get user's GMD object.",
+			"url": "mynxgapiv4-customers/api/v4/users/{uuid}/gmd/objects/{uuid}",
+			"time": 17,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "15d7d643-7a6a-410f-84d2-64aae6261448",
+			"name": "Remove user's GMD object.",
+			"url": "mynxgapiv4-customers/api/v4/users/{uuid}/gmd/objects/{uuid}",
+			"time": 15,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "bf70a3f6-e28f-4afe-978f-fb48209f552b",
+			"name": "Get current user information.",
+			"url": "mynxgapiv4-customers/api/v4/users/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a90408cd-b83b-4c52-ab1a-adb58d9cc9c4",
+			"name": "Get user information.",
+			"url": "mynxgapiv4-customers/api/v4/users/952f4670-0313-427f-9df8-a3fd2e581a15/",
+			"time": 44,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "071246e5-d28f-4e2d-b04b-9eafec959f45",
+			"name": "Get all users information",
+			"url": "mynxgapiv4-customers/api/v4/users/?all",
+			"time": 45,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "56886444-fa0b-4f02-9bc8-22cdf0889b59",
+			"name": "Create new user entry. Default roles. Empty data.",
+			"url": "mynxgapiv4-customers/api/v4/users/",
+			"time": 42,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a88ba670-ce31-4a72-b6c5-92cf87ee8aca",
+			"name": "Update user information.",
+			"url": "mynxgapiv4-customers/api/v4/users/",
+			"time": 53,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a75efae8-3979-4aa0-a57a-25017af8291b",
+			"name": "Remove user entry",
+			"url": "mynxgapiv4-customers/api/v4/users/{{user_uuid}}/",
+			"time": 46,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unknown session. Please try login again.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unknown session. Please try login again.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"id": "a52379c5-f25b-49c0-980b-7ec2dcd44195",
+			"name": "Get api version",
+			"url": "mynxgapiv4-customers /api/v4/versions/?version=0.0.1",
+			"time": 32,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Success Response": false,
+				"msg: Unable to decode authorization token.": true
+			},
+			"testPassFailCounts": {
+				"Success Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"msg: Unable to decode authorization token.": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"count": 1,
+	"collection": {
+		"requests": [
+			{
+				"id": "433a45bb-142c-4c3e-8456-db5af160e22d",
+				"method": "GET"
+			},
+			{
+				"id": "74730527-4208-4a1e-85eb-c058469a9e18",
+				"method": "POST"
+			},
+			{
+				"id": "34b487fa-afbd-4ba9-bf2e-84be49f35f60",
+				"method": "PATCH"
+			},
+			{
+				"id": "c93b8751-89cb-48f1-a19f-d41f6ac54534",
+				"method": "POST"
+			},
+			{
+				"id": "deb75d80-f475-42ae-af4c-9e4623c41fe2",
+				"method": "GET"
+			},
+			{
+				"id": "d55ed57e-b6bd-4315-bbe2-7c9c89c4409a",
+				"method": "DELETE"
+			},
+			{
+				"id": "51858678-6db8-43d4-84a4-b373a2ce89bf",
+				"method": "DELETE"
+			},
+			{
+				"id": "6bb498cf-e6c7-48bb-bc14-cadada85d11b",
+				"method": "GET"
+			},
+			{
+				"id": "4476e28f-fb52-4894-a916-f997fe5a5782",
+				"method": "POST"
+			},
+			{
+				"id": "582c9477-2587-4692-b1b6-9a305547e626",
+				"method": "POST"
+			},
+			{
+				"id": "b4e321f5-cb31-47b3-a824-4277a7b7ecdf",
+				"method": "POST"
+			},
+			{
+				"id": "54a9c504-d0a9-41ca-8376-93077aa11fbf",
+				"method": "POST"
+			},
+			{
+				"id": "fd547fbf-2e96-4619-a982-f17a35068651",
+				"method": "POST"
+			},
+			{
+				"id": "5643a572-5eb6-4ec8-b25c-a8c72ba73e7a",
+				"method": "POST"
+			},
+			{
+				"id": "f6f11e89-5849-4860-8aa0-4a9fcc40e094",
+				"method": "POST"
+			},
+			{
+				"id": "e4ae0940-3dab-4c94-97ac-1f8bcff44abc",
+				"method": "POST"
+			},
+			{
+				"id": "660c8c63-b642-4ce9-98ad-74dfc39befc4",
+				"method": "POST"
+			},
+			{
+				"id": "0c18c268-6b76-4073-9f16-9ae97aaccc0e",
+				"method": "POST"
+			},
+			{
+				"id": "7099afa4-6b51-4393-b54b-c1926effff84",
+				"method": "POST"
+			},
+			{
+				"id": "44a63fab-c99d-4427-b565-7d2062059252",
+				"method": "GET"
+			},
+			{
+				"id": "a1914d30-0d8e-4dc1-b567-4620974c655d",
+				"method": "GET"
+			},
+			{
+				"id": "d17a6b07-4e11-48a4-b454-5e492775ce62",
+				"method": "DELETE"
+			},
+			{
+				"id": "b3eabeac-0a47-4d0a-b93a-5c0380c8f30f",
+				"method": "DELETE"
+			},
+			{
+				"id": "ac5337ec-591a-4b90-a6a6-a35df2de4fab",
+				"method": "PATCH"
+			},
+			{
+				"id": "df744c11-a4d3-4025-a7ca-c08032547e37",
+				"method": "PATCH"
+			},
+			{
+				"id": "9b54b536-5bd4-487f-a982-534e633e171c",
+				"method": "PATCH"
+			},
+			{
+				"id": "84abe25b-82b6-4148-badf-db8f64a9840e",
+				"method": "POST"
+			},
+			{
+				"id": "080a981c-d7f6-4523-b8e4-8bfbe95fbe84",
+				"method": "POST"
+			},
+			{
+				"id": "ae871f45-13cb-46f0-9dcf-6cf2af3805d3",
+				"method": "GET"
+			},
+			{
+				"id": "d3af1513-cd80-42c2-9633-330ed9814661",
+				"method": "DELETE"
+			},
+			{
+				"id": "a099039e-13be-4102-b025-bb8c9bc4748f",
+				"method": "PATCH"
+			},
+			{
+				"id": "eda52557-0953-42f2-a08d-b304ca004046",
+				"method": "POST"
+			},
+			{
+				"id": "8b1208e2-4f27-42af-a927-849339a438f0",
+				"method": "GET"
+			},
+			{
+				"id": "3c1a397e-d867-4b7b-87ce-f56408aeb240",
+				"method": "DELETE"
+			},
+			{
+				"id": "605fef5e-d6c5-40e2-bc47-1571c45728da",
+				"method": "POST"
+			},
+			{
+				"id": "68fe3653-31d2-4bcf-b1d3-022db5559bf7",
+				"method": "DELETE"
+			},
+			{
+				"id": "0813dbc1-55ed-4b95-b2a8-64495327ab78",
+				"method": "POST"
+			},
+			{
+				"id": "54bb36c3-ad33-453d-8a98-a2231cf8297d",
+				"method": "POST"
+			},
+			{
+				"id": "8cf6fb79-7d2e-4bb3-a3dd-43016ea4c749",
+				"method": "GET"
+			},
+			{
+				"id": "86bbbfda-2b2f-420d-ab0f-145858e45a46",
+				"method": "GET"
+			},
+			{
+				"id": "195df9b2-ef96-431e-a796-14d88e0466cb",
+				"method": "PATCH"
+			},
+			{
+				"id": "14ad3df5-380b-4bea-b90f-941f1fb3fc65",
+				"method": "PATCH"
+			},
+			{
+				"id": "0e697df6-75b4-4dd2-8e66-c7de4237f492",
+				"method": "POST"
+			},
+			{
+				"id": "3eee800d-2575-438d-a24a-b9bea894caaa",
+				"method": "POST"
+			},
+			{
+				"id": "4fc46a05-23ac-4440-9abc-0f3d15c3008c",
+				"method": "GET"
+			},
+			{
+				"id": "1c5dd747-4348-4bde-afbc-0168f4ea5b8e",
+				"method": "GET"
+			},
+			{
+				"id": "8622b1c0-0ea7-482d-a688-243d3fd2e83f",
+				"method": "PATCH"
+			},
+			{
+				"id": "cb8b78bc-306c-49af-9a37-27d0d96d63c2",
+				"method": "PATCH"
+			},
+			{
+				"id": "f28c2d5c-b7a1-4a46-b36e-76942e0d4f19",
+				"method": "DELETE"
+			},
+			{
+				"id": "c874e006-8028-4502-b459-ca7b85aa2c57",
+				"method": "DELETE"
+			},
+			{
+				"id": "f7a67fbb-f699-4b7e-b45e-4363f2bbba5b",
+				"method": "POST"
+			},
+			{
+				"id": "cdb89543-f8f4-4afb-ae30-79fae93dcdf0",
+				"method": "POST"
+			},
+			{
+				"id": "fee32d3e-3c99-445c-bd58-c2bc6dec1512",
+				"method": "GET"
+			},
+			{
+				"id": "6a5a7668-248e-4ce0-bf13-ed56a245303e",
+				"method": "GET"
+			},
+			{
+				"id": "d4339b53-70c2-4fed-b0b4-45502c1d73fd",
+				"method": "DELETE"
+			},
+			{
+				"id": "64bb312c-b116-4a59-8304-725cd044d992",
+				"method": "DELETE"
+			},
+			{
+				"id": "4e2514c4-fcc3-4658-bbee-1f7250e35fd0",
+				"method": "GET"
+			},
+			{
+				"id": "a603d138-1c98-4000-8487-b4c8dbfc480c",
+				"method": "GET"
+			},
+			{
+				"id": "b5acd61f-c33f-403c-924d-5bff29a873fd",
+				"method": "GET"
+			},
+			{
+				"id": "cc3e72f8-ad24-4602-8919-03d489f11d7a",
+				"method": "POST"
+			},
+			{
+				"id": "844ac0d1-7cef-489e-bf5e-9773024cd4fd",
+				"method": "POST"
+			},
+			{
+				"id": "a04afa07-aa54-43fa-b3a5-12d49e546b6d",
+				"method": "PATCH"
+			},
+			{
+				"id": "84c4a274-9a71-4d43-bf84-a727ce7818ad",
+				"method": "DELETE"
+			},
+			{
+				"id": "b615008b-0de9-4559-a598-4eb88518938d",
+				"method": "GET"
+			},
+			{
+				"id": "74d0245c-8245-4674-8ca5-673feaab20e1",
+				"method": "GET"
+			},
+			{
+				"id": "a3491c4e-40bf-4f17-a319-e799068c3478",
+				"method": "GET"
+			},
+			{
+				"id": "fc8cbd79-2450-4333-b295-9c65d6759c97",
+				"method": "POST"
+			},
+			{
+				"id": "8835adeb-f48a-418e-a72d-07889b5470f7",
+				"method": "POST"
+			},
+			{
+				"id": "1a7da7ca-c951-4bf1-b29d-630f6987cdb0",
+				"method": "POST"
+			},
+			{
+				"id": "655a0a34-5823-4f23-b82d-c1998782f123",
+				"method": "POST"
+			},
+			{
+				"id": "ad492fb4-26ce-46ff-8e6c-5195a9514592",
+				"method": "POST"
+			},
+			{
+				"id": "d33e7ba7-c41e-428b-a6c0-20287109e5e9",
+				"method": "GET"
+			},
+			{
+				"id": "1efca5e8-f7bd-4698-bf4c-8ad94c1c6d3b",
+				"method": "DELETE"
+			},
+			{
+				"id": "b37b13b0-7034-4abe-8a3c-a776cd2909f5",
+				"method": "PATCH"
+			},
+			{
+				"id": "5af50d1c-d729-451f-b4c9-2adac934028b",
+				"method": "GET"
+			},
+			{
+				"id": "f84cf277-2e72-44a4-9814-a01208a2ec66",
+				"method": "POST"
+			},
+			{
+				"id": "22f4e2fe-e303-4afb-86b5-d8c37b892cc7",
+				"method": "GET"
+			},
+			{
+				"id": "352888a1-b3ab-47d1-ae53-8f5365fc3781",
+				"method": "DELETE"
+			},
+			{
+				"id": "c8bb94cd-0972-4931-8eba-f8ea194b9767",
+				"method": "POST"
+			},
+			{
+				"id": "8d7abe6e-99d2-4a4d-9f20-ac5743762cae",
+				"method": "POST"
+			},
+			{
+				"id": "a6880f3f-cdfd-4c9f-93a2-31a047b97ffc",
+				"method": "GET"
+			},
+			{
+				"id": "8aaf35f1-8f76-4a3e-a286-748b13e1678e",
+				"method": "GET"
+			},
+			{
+				"id": "e5647fe9-e92a-44f3-9dbe-278e392fbd33",
+				"method": "GET"
+			},
+			{
+				"id": "37abb3bb-1aed-4be4-88dd-bb1041fb6641",
+				"method": "GET"
+			},
+			{
+				"id": "b488ef8f-3e4b-41d9-99f3-f6255dc2a215",
+				"method": "POST"
+			},
+			{
+				"id": "031c18c3-9169-442b-b905-da44dcd2d7ce",
+				"method": "POST"
+			},
+			{
+				"id": "2b785d8f-9e14-40a1-8a19-48d83e16013f",
+				"method": "GET"
+			},
+			{
+				"id": "20bc9ef4-fd1e-447f-b52e-d78a09e24c85",
+				"method": "GET"
+			},
+			{
+				"id": "eec9dcd0-1d0c-4e1b-94f6-532809d9a8ac",
+				"method": "GET"
+			},
+			{
+				"id": "dfd07968-ec31-40a4-9e3b-deddc55c45d4",
+				"method": "POST"
+			},
+			{
+				"id": "927ffc48-a9f7-4f73-9ab4-d9238a370fcb",
+				"method": "GET"
+			},
+			{
+				"id": "580ce482-81c2-4fda-9873-6f6f0a647274",
+				"method": "PATCH"
+			},
+			{
+				"id": "e3665083-e7ec-4948-8f1c-bce5ce259b64",
+				"method": "GET"
+			},
+			{
+				"id": "2ceb0639-14de-498d-8c15-993f538a0ef1",
+				"method": "POST"
+			},
+			{
+				"id": "72979b70-b316-427e-87a3-c8837b9d46de",
+				"method": "POST"
+			},
+			{
+				"id": "6b6b3b30-7fa6-469f-abc3-a464694e6a14",
+				"method": "GET"
+			},
+			{
+				"id": "a4df88e1-c66c-4b47-9c4f-0b6edb273741",
+				"method": "POST"
+			},
+			{
+				"id": "218003b8-1ffa-48e4-aef9-2cc5a95e0f0e",
+				"method": "GET"
+			},
+			{
+				"id": "c6f6789f-533c-4a7e-bb55-2306ff37d4bd",
+				"method": "DELETE"
+			},
+			{
+				"id": "24c80347-946d-4f39-b8e2-d91f5bb7f335",
+				"method": "GET"
+			},
+			{
+				"id": "5712b131-7dca-4158-aa0c-8e774f3cf9ac",
+				"method": "POST"
+			},
+			{
+				"id": "35e86e1e-bcd3-4703-a491-da03d112363b",
+				"method": "GET"
+			},
+			{
+				"id": "75d1b801-8e6f-4be2-82a5-2131ebd79204",
+				"method": "DELETE"
+			},
+			{
+				"id": "99d699ba-f49e-4fa0-951e-1b637acb8e34",
+				"method": "POST"
+			},
+			{
+				"id": "684b868b-ae54-422f-a61f-4e115933e31c",
+				"method": "GET"
+			},
+			{
+				"id": "4caf1ee8-f358-42fb-a444-45cc1fefe1c0",
+				"method": "DELETE"
+			},
+			{
+				"id": "512ee9ee-34c1-4d93-abd2-a16c195f1957",
+				"method": "POST"
+			},
+			{
+				"id": "437dc9dc-c8ef-438d-b055-91b463215d3e",
+				"method": "GET"
+			},
+			{
+				"id": "e0b10437-0d00-4599-86f4-93958f327086",
+				"method": "PATCH"
+			},
+			{
+				"id": "73a5131a-0f2d-4de2-b2cb-f2f3b44891a7",
+				"method": "DELETE"
+			},
+			{
+				"id": "bf632584-4535-4096-8bc4-0d6a33811b5f",
+				"method": "POST"
+			},
+			{
+				"id": "821b3d03-ca6d-4c92-a90e-13b13ca0698a",
+				"method": "DELETE"
+			},
+			{
+				"id": "32830ed2-2351-47ac-b432-a0fac7757475",
+				"method": "GET"
+			},
+			{
+				"id": "1e3fc41a-e478-43f6-8335-c553a9de217e",
+				"method": "POST"
+			},
+			{
+				"id": "9ad3ea65-3955-4b87-8d62-ac2434e363cb",
+				"method": "POST"
+			},
+			{
+				"id": "7d2cf9d8-d3cb-434a-bd13-cc415ba2541c",
+				"method": "GET"
+			},
+			{
+				"id": "bd3f6966-a343-4cb1-a402-f5beb3680229",
+				"method": "GET"
+			},
+			{
+				"id": "8921eb98-8764-47ec-8418-e61af2601ff6",
+				"method": "POST"
+			},
+			{
+				"id": "39564e86-5bd7-4f4e-afb6-02700095b5ad",
+				"method": "POST"
+			},
+			{
+				"id": "c453bfe7-adbc-4745-8c29-82aff1f18f3c",
+				"method": "POST"
+			},
+			{
+				"id": "e7e8c600-d8a2-4df6-899f-b3755ada6057",
+				"method": "POST"
+			},
+			{
+				"id": "60123113-322b-4c1d-beed-6585e00ab22e",
+				"method": "GET"
+			},
+			{
+				"id": "fbdac209-875e-4173-91b1-54ffecc0e6a6",
+				"method": "DELETE"
+			},
+			{
+				"id": "9d042200-b9ae-4766-bd20-bc5aa47ca384",
+				"method": "POST"
+			},
+			{
+				"id": "4ab9e337-988a-43ab-82ca-1876e037f9f1",
+				"method": "DELETE"
+			},
+			{
+				"id": "a774258f-05ba-4f12-91c9-03bb9314a41e",
+				"method": "GET"
+			},
+			{
+				"id": "91382a38-9351-4ac4-9346-23e39df5b146",
+				"method": "POST"
+			},
+			{
+				"id": "349f394c-5d58-40da-9bdd-d5f37adcc6bf",
+				"method": "GET"
+			},
+			{
+				"id": "43df8b43-6770-4ec0-b361-7b6aaced47cb",
+				"method": "GET"
+			},
+			{
+				"id": "bdb08959-dda4-4bd1-9e0c-9a945a6e4005",
+				"method": "DELETE"
+			},
+			{
+				"id": "f23db4af-5452-4ea3-bb08-5ccc45242907",
+				"method": "GET"
+			},
+			{
+				"id": "c6064920-49cb-46f2-a325-66163b9600e6",
+				"method": "GET"
+			},
+			{
+				"id": "0d58946c-2ca4-4ce8-8cd4-1a65f8c1c2c8",
+				"method": "POST"
+			},
+			{
+				"id": "832526ba-0ccb-451f-985a-6078ec6b4319",
+				"method": "POST"
+			},
+			{
+				"id": "2828a2ba-65be-40f4-8c03-78e4f0616d9c",
+				"method": "GET"
+			},
+			{
+				"id": "936cd7a4-9926-46f2-b1f5-3ed2277c5798",
+				"method": "DELETE"
+			},
+			{
+				"id": "97e37cfc-9584-44ac-aafa-e55d23d828b9",
+				"method": "POST"
+			},
+			{
+				"id": "8ad637f3-3d8a-47e0-868e-8c934ed06aea",
+				"method": "DELETE"
+			},
+			{
+				"id": "bb3f2610-1ae5-4749-81ef-689e9a3baf09",
+				"method": "GET"
+			},
+			{
+				"id": "481ef7fa-3952-478a-bafe-4727d47502ef",
+				"method": "POST"
+			},
+			{
+				"id": "46e48b54-fad2-470f-bec5-e93ce288d402",
+				"method": "DELETE"
+			},
+			{
+				"id": "ad785b0b-6297-4894-a6c2-5b2420f4ceff",
+				"method": "GET"
+			},
+			{
+				"id": "8e750e43-9e31-4c3d-ab39-3e86466bb869",
+				"method": "DELETE"
+			},
+			{
+				"id": "45e71ac2-0908-403e-8f0b-3c0ad3bd8ef2",
+				"method": "POST"
+			},
+			{
+				"id": "94799cff-48d3-433a-b80f-cef25ecf88aa",
+				"method": "GET"
+			},
+			{
+				"id": "0d416efa-9d0e-46ff-b719-1b4c664e5ae8",
+				"method": "GET"
+			},
+			{
+				"id": "15d7d643-7a6a-410f-84d2-64aae6261448",
+				"method": "DELETE"
+			},
+			{
+				"id": "bf70a3f6-e28f-4afe-978f-fb48209f552b",
+				"method": "GET"
+			},
+			{
+				"id": "a90408cd-b83b-4c52-ab1a-adb58d9cc9c4",
+				"method": "GET"
+			},
+			{
+				"id": "071246e5-d28f-4e2d-b04b-9eafec959f45",
+				"method": "GET"
+			},
+			{
+				"id": "56886444-fa0b-4f02-9bc8-22cdf0889b59",
+				"method": "POST"
+			},
+			{
+				"id": "a88ba670-ce31-4a72-b6c5-92cf87ee8aca",
+				"method": "PATCH"
+			},
+			{
+				"id": "a75efae8-3979-4aa0-a57a-25017af8291b",
+				"method": "DELETE"
+			},
+			{
+				"id": "a52379c5-f25b-49c0-980b-7ec2dcd44195",
+				"method": "GET"
+			},
+			{
+				"id": "e122254e-8c44-43ff-84f4-0d5e54cc17bd",
+				"method": "GET"
+			}
+		]
+	}
+}

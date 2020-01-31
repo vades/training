@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "cb4fee08-c15b-4135-a207-cacc7789c543",
+		"name": "mynxgapiv4-cell-location",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find",
+			"item": [
+				{
+					"name": "Find cell location",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v4/cells/find/?radio=GSM&mobileCountryCode=262&mobileNetworkCode=2&locationAreaCode=691&cellId=6411",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v4",
+								"cells",
+								"find",
+								""
+							],
+							"query": [
+								{
+									"key": "radio",
+									"value": "GSM"
+								},
+								{
+									"key": "mobileCountryCode",
+									"value": "262"
+								},
+								{
+									"key": "mobileNetworkCode",
+									"value": "2"
+								},
+								{
+									"key": "locationAreaCode",
+									"value": "691"
+								},
+								{
+									"key": "cellId",
+									"value": "6411"
+								}
+							]
+						},
+						"description": "eturns longitude and latitude of the cell.\n\n**Required params**\n- radio  (GSM, UMTS, WCDMA, LTE)\n- mobileCountryCode\n- mobileNetworkCode\n- locationAreaCode\n- cellId\n\n**Result example**\n```\n{\n    \"cell\": {\n        \"cellId\": \"6411\",\n        \"longitude\": \"9.921488\",\n        \"latitude\": \"49.974611\",\n        \"range\": \"22074\"\n    },\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Find cell location response example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/v4/cells/find/?radio=GSM&mobileCountryCode=262&mobileNetworkCode=2&locationAreaCode=691&cellId=6411",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v4",
+										"cells",
+										"find",
+										""
+									],
+									"query": [
+										{
+											"key": "radio",
+											"value": "GSM"
+										},
+										{
+											"key": "mobileCountryCode",
+											"value": "262"
+										},
+										{
+											"key": "mobileNetworkCode",
+											"value": "2"
+										},
+										{
+											"key": "locationAreaCode",
+											"value": "691"
+										},
+										{
+											"key": "cellId",
+											"value": "6411"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2020 09:52:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept, Cache-Control, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "121"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=15, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cell\": {\n        \"cellId\": \"6411\",\n        \"longitude\": \"9.923127\",\n        \"latitude\": \"49.976891\",\n        \"range\": \"21798\"\n    },\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "triangulation",
+			"item": [
+				{
+					"name": "Get cell location calculated with triangulation",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7528ab21-5118-48ac-9cbf-0918fabfc014",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "c8f8e7a2-2eb7-4edf-bb98-07e90f335cc5",
+								"exec": [
+									"tests[responseBody] = true;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"location\":{\n        \"mobileCountryCode_\": \"262\",\n        \"mobileNetworkCode\": \"2\",\n        \"radio\": \"GSM\"\n     },\n    \n    \"cells\": [\n        {\n           \n            \"locationAreaCode\": \"955\",\n            \"cellId\":\"246402836\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"8216\",\n            \"cellId\": \"27462\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"955\",\n            \"cellId\": \"246374070\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"955\",\n            \"cellId\": \"246370125\",\n            \"signal\": -100\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v4/cells/triangulation/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v4",
+								"cells",
+								"triangulation",
+								""
+							]
+						},
+						"description": "Returns cell location calculated by triangulation.\n\n**Body**\n```\n{\n     \"location\":{\n        \"mobileCountryCode\": \"262\",\n        \"mobileNetworkCode\": \"2\",\n        \"radio\": \"GSM\"\n     },\n    \n    \"cells\": [\n        {\n           \n            \"locationAreaCode\": \"955\",\n            \"cellId\":\"246402836\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"8216\",\n            \"cellId\": \"27462\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"955\",\n            \"cellId\": \"246374070\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"955\",\n            \"cellId\": \"246370125\",\n            \"signal\": -100\n        }\n    ]\n}\n```\n\n**Result example**\n```\n{\n    \"triangulation\": {\n        \"latitude\": \"49.393419\",\n        \"longitude\": \"11.125933\"\n    },\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Get cell location calculated with triangulation response example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"location\":{\n        \"mobileCountryCode\": \"262\",\n        \"mobileNetworkCode\": \"2\",\n        \"radio\": \"GSM\"\n     },\n    \n    \"cells\": [\n        {\n           \n            \"locationAreaCode\": \"955\",\n            \"cellId\":\"246402836\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"8216\",\n            \"cellId\": \"27462\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"955\",\n            \"cellId\": \"246374070\",\n            \"signal\": -100\n        },\n        {\n            \"locationAreaCode\": \"955\",\n            \"cellId\": \"246370125\",\n            \"signal\": -100\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/v4/cells/triangulation/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v4",
+										"cells",
+										"triangulation",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2020 09:54:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,POST,PUT,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept, Cache-Control, Authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1026"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=15, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"triangulation\": {\n        \"latitude\": \"49.393201\",\n        \"longitude\": \"11.125703\"\n    },\n    \"cells\": [\n        {\n            \"latitude\": \"49.485267\",\n            \"longitude\": \"11.124344\",\n            \"signal\": -100,\n            \"params\": {\n                \"locationAreaCode\": \"955\",\n                \"cellId\": \"246402836\",\n                \"signal\": -100,\n                \"mobileCountryCode\": \"262\",\n                \"mobileNetworkCode\": \"2\",\n                \"radio\": \"GSM\",\n                \"latlong\": \"49.485267,11.124344\"\n            }\n        },\n        {\n            \"latitude\": \"49.219106\",\n            \"longitude\": \"10.928383\",\n            \"signal\": -100,\n            \"params\": {\n                \"locationAreaCode\": \"8216\",\n                \"cellId\": \"27462\",\n                \"signal\": -100,\n                \"mobileCountryCode\": \"262\",\n                \"mobileNetworkCode\": \"2\",\n                \"radio\": \"GSM\",\n                \"latlong\": \"49.219106,10.928383\"\n            }\n        },\n        {\n            \"latitude\": \"49.460766\",\n            \"longitude\": \"11.134038\",\n            \"signal\": -100,\n            \"params\": {\n                \"locationAreaCode\": \"955\",\n                \"cellId\": \"246374070\",\n                \"signal\": -100,\n                \"mobileCountryCode\": \"262\",\n                \"mobileNetworkCode\": \"2\",\n                \"radio\": \"GSM\",\n                \"latlong\": \"49.460766,11.134038\"\n            }\n        },\n        {\n            \"latitude\": \"49.407664\",\n            \"longitude\": \"11.316046\",\n            \"signal\": -100,\n            \"params\": {\n                \"locationAreaCode\": \"955\",\n                \"cellId\": \"246370125\",\n                \"signal\": -100,\n                \"mobileCountryCode\": \"262\",\n                \"mobileNetworkCode\": \"2\",\n                \"radio\": \"GSM\",\n                \"latlong\": \"49.407664,11.316046\"\n            }\n        }\n    ],\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3d67d755-50cb-4d70-9035-82874a32f01a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f9488c7f-6959-4231-8ec0-1df5d63aabc6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
